@@ -8,7 +8,7 @@
             "type": "pwa-chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "url": "http://localhost:8080",
+            "url": "file:///D:/c/projet/openclassroom/soutenance%20livrable/P4_Soule_Saidou/GameOn-website-FR-master/v1/starterOnly/index.html",
             "webRoot": "${workspaceFolder}"
         }
     ]
