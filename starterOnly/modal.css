@@ -14,7 +14,7 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  background-image: url("background.png");
+  /* background-image: url("background.png"); */
   font-family: var(--font-default);
   font-size: 18px;
   max-width: 1300px;
@@ -32,13 +32,13 @@ img {
 
 .topnav {
   overflow: hidden;
-  margin: 3.5%;
+  margin: 8% 4% 0%8%;
 }
 .header-logo {
-    float: left;
+  float: left;
 }
 .main-navbar {
-    float: right;
+  float: right;
 }
 .topnav a {
   float: left;
@@ -68,16 +68,21 @@ img {
   display: none;
 }
 
-@media screen and (max-width: 768px) {
-  .topnav a {display: none;}
+@media screen and (max-width: 1096px) {
+  .topnav a {
+    display: none;
+  }
   .topnav a.icon {
     float: right;
     display: block;
+    color: red;
   }
 }
 
-@media screen and (max-width: 768px) {
-  .topnav.responsive {position: relative;}
+@media screen and (max-width: 1096px) {
+  .topnav.responsive {
+    position: relative;
+  }
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
@@ -90,16 +95,20 @@ img {
   }
 }
 
-
-
- @media screen and (max-width: 540px) {
-  .topnav a {display: none;}
+@media screen and (max-width: 1096px) {
+  .topnav a {
+    display: none;
+  }
   .topnav a.icon {
     float: right;
     display: block;
     margin-top: -15px;
   }
-} 
+  .header-logo img {
+    float: left;
+    width: 50%;
+  }
+}
 
 main {
   font-size: 130%;
@@ -111,8 +120,6 @@ main {
   margin: 1px 20px 15px;
   border-radius: 2rem;
   text-align: justify;
-
-
 }
 
 .modal-btn {
@@ -206,9 +213,9 @@ input {
   width: 100%;
   border-radius: 8px;
   font-size: 20px;
-  height: 48px;
+  height: 65px;
 }
-.formData[data-error]::after {
+/* .formData[data-error]::after {
   content: attr(data-error);
   font-size: 0.4em;
   color: #e54858;
@@ -225,7 +232,7 @@ input {
 }
 .formData[data-error-visible="true"] .text-control {
   border: 2px solid #e54858;
-}
+} */
 /* 
 input[data-error]::after {
     content: attr(data-error);
@@ -405,13 +412,13 @@ input[data-error]::after {
   font-size: 16px;
 }
 .hero-section {
-  min-height: 93vh;
-  border-radius: 10px;
+  margin-top: 30px;
+
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   overflow: hidden;
-  box-shadow: 0 2px 7px 2px rgba(0, 0, 0, 0.2);
-  margin-bottom: 10px;
+  box-shadow: 0 12px 12px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
 }
 .hero-content {
   padding: 51px 67px;
@@ -420,7 +427,6 @@ input[data-error]::after {
   color: #fff;
   position: relative;
   text-align: left;
-  min-width: 424px;
 }
 .hero-content::after {
   content: "";
@@ -448,11 +454,11 @@ input[data-error]::after {
 }
 .btn-signup {
   outline: none;
-  text-transform: capitalize;
+
   font-size: 1.3rem;
   padding: 15px 23px;
   margin: 0;
-  margin-top: 59px;
+  margin-top: 85px;
 }
 .hero-img {
   grid-column: span 8;
@@ -462,12 +468,13 @@ input[data-error]::after {
   height: 100%;
   display: block;
   padding: 0;
+  object-fit: cover;
 }
 .copyrights {
   color: #fe142f;
   padding: 0;
   font-size: 1rem;
-  margin: 60px 0 30px;
+  margin: 90px 0 50px;
   font-weight: bolder;
 }
 .hero-section > .btn-signup {
@@ -478,10 +485,39 @@ footer {
   padding-right: 2vw;
   margin: 0 20px;
 }
+
+/*Ajouts correctifs*/
+
+.error {
+  color: #ff4e60;
+  border: #ff4e60 2px solid;
+  transition: 00.3s;
+}
+.error-message {
+  font-size: 0.4em;
+  color: #ff4e60;
+  margin: 7px 0 7px 0;
+  text-align: right;
+  line-height: 0.3;
+}
+.display {
+  display: none;
+}
+.thankstext {
+  font-size: 36px;
+  margin: 286px 121px 312px 105px;
+  text-align: center;
+  line-height: 51px;
+}
+.closing {
+  margin-bottom: 17px;
+}
+/*Ajouts correctifs*/
 @media screen and (max-width: 800px) {
   .hero-section {
     display: block;
     box-shadow: unset;
+    margin-top: 0%;
   }
   .hero-content {
     background: #fff;
@@ -495,25 +531,60 @@ footer {
     display: none;
   }
   .hero-headline {
-    font-size: 4.5rem;
+    font-size: 35px;
     white-space: normal;
   }
   .hero-text {
     width: unset;
-    font-size: 1.5rem;
+    font-size: 12px;
+    margin-top: 35px;
   }
   .hero-img img {
     border-radius: 10px;
-    margin-top: 40px;
+    margin-top: 0px;
   }
   .hero-section > .btn-signup {
     display: block;
-    margin: 32px auto 10px;
-    padding: 12px 35px;
+    margin: 30px auto 10px;
+    padding: 8px 35px;
+    font-size: 14px;
   }
   .copyrights {
-    margin-top: 50px;
+    margin-top: 5px;
     text-align: center;
+    font-size: 10px;
+  }
+  .content {
+    margin: 20% auto;
+  }
+  .text-control {
+    font-size: 20px;
+    height: 50px;
+  }
+  .bground {
+    background-color: unset;
+  }
+  .formData label {
+    font-size: 14px;
+  }
+  .thankstext {
+    font-size: 36px;
+    margin: 160px 101px 240px 85px;
+    text-align: center;
+    line-height: 51px;
+  }
+  .btn-submit {
+    padding: 8px 50px;
+  }
+  .closing {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  .hero-headline {
+    font-size: 55px;
+    white-space: normal;
   }
 }
 
@@ -526,4 +597,3 @@ footer {
     opacity: 1;
   }
 }
-
